@@ -6,6 +6,7 @@ import About from './pages/About'
 import Post from './components/Post'
 import './App.css'
 import Listings from './components/Listings'
+import EditPost from './components/EditPost'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/post" element={<Post />} />
           <Route path="/listings" element={<Listings />} />
+          <Route path="/EditPost/:id" element={<EditPost />} />
         </Routes>
       </main>
     </div>
