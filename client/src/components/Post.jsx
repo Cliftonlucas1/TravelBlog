@@ -3,9 +3,10 @@ import axios from 'axios'
 
 const Post = (props) => {
   const initialState = {
-    issueType: '',
-    subject: '',
-    message: ''
+    user: '',
+    place:'',
+    description: '',
+    image: ''
   }
   const [postState, setPostState] = useState(initialState)
 
@@ -15,36 +16,46 @@ const Post = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post('http://localhost:3001/issues', postState)
+    await axios.post('http://localhost:3001/api/posts', postState)
     setPostState(initialState)
-props.getIssues()
+
   }
+
+
 
   return (
     <form onSubmit={handleSubmit}>
-<h2>Add A New Boat Listing</h2>
-  <label htmlFor="userName">User Name:</label>
+<h2>Add A New Post!</h2>
+  <label htmlFor="user"> name:</label>
   <input
     type="text"
-    id="userName"
+    id="user"
     onChange={handleChange}
-    value={postState.userName}
+    value={postState.user}
   />
+   <label htmlFor="place">Location</label>
+  <textarea
+    id="place"
+    cols="30"
+    rows="10"
+    onChange={handleChange}
+    value={postState.place}
+  ></textarea>
   <label htmlFor="description">Description</label>
   <textarea
     id="description"
     cols="30"
     rows="10"
     onChange={handleChange}
-    value={postState.message}
+    value={postState.description}
   ></textarea>
-   <label htmlFor="descriptionPicture">Description Picture</label>
+   <label htmlFor="image">Description Picture</label>
   <textarea
-    id="descriptionPicture"
+    id="image"
     cols="30"
     rows="10"
     onChange={handleChange}
-    value={postState.descriptionPicture}
+    value={postState.image}
   ></textarea>
   <button type="submit">Send</button>
 </form>

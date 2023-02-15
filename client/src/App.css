@@ -14,7 +14,7 @@ form {
 }
 
 header {
-  background-color: #8d6161;
+  background-color: #6c6ae4;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -23,4 +23,17 @@ header {
 
 header nav a {
   margin: 0 1em;
+}
+
+.listing-wrapper {
+display: flex;
+justify-content: center;
+text-align: center;
+padding: 5px;
+margin: 5px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
 }
