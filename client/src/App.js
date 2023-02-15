@@ -7,6 +7,7 @@ import Post from './components/Post'
 import './App.css'
 import Listings from './components/Listings'
 import EditPost from './components/EditPost'
+import DeletePost from './components/DeletePost'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/post" element={<Post />} />
           <Route path="/listings" element={<Listings />} />
           <Route path="/EditPost/:id" element={<EditPost />} />
+          <Route path="/DeletePost/:id" element={<DeletePost />} />
         </Routes>
       </main>
     </div>

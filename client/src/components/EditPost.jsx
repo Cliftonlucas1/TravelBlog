@@ -41,6 +41,16 @@ const handleSubmitEdit = async (event) => {
 navigate('/listings')
 
 }
+
+
+
+
+
+
+
+
+
+
 return (
   <form onSubmit={handleSubmitEdit}>
 <h2>Add A New Post!</h2>
@@ -83,65 +93,3 @@ return (
 
 
 export default EditPost
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const updatePost = async (req, res) => {
-//   try {
-//     const post = await Post.findByIdAndUpdate(req.params.id, req.body, {
-//       new: true
-//     })
-//     res.status(200).json(post)
-//   } catch (error) {
-//     return res.status(500).send(error.message)
-//   }
-
-
-
-{/* <form onSubmit={handleSubmit}>
-<h2>Edit Your Post!</h2>
-  <label htmlFor="user"> name:</label>
-  <input
-    type="text"
-    id="user"
-    onChange={handleChangeEdit}
-    value={editPost.user}
-  />
-   <label htmlFor="place">Location</label>
-  <textarea
-    id="place"
-    cols="30"
-    rows="10"
-    onChange={handleChangeEdit}
-    value={editPost.place}
-  ></textarea>
-  <label htmlFor="description">Description</label>
-  <textarea
-    id="description"
-    cols="30"
-    rows="10"
-    onChange={handleChangeEdit}
-    value={editPost.description}
-  ></textarea>
-   <label htmlFor="image">Description Picture</label>
-  <textarea
-    id="image"
-    cols="30"
-    rows="10"
-    onChange={handleChangeEdit}
-    value={editPost.image}
-  ></textarea>
-  <button type="submit">Send</button>
-</form>
- */}

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import EditPost from "./EditPost"
+import DeletePost from "./DeletePost"
+
 import { useNavigate } from "react-router-dom"
 
 
@@ -17,7 +19,7 @@ let navigate=useNavigate()
 
       const response = await axios.get(
         `http://localhost:3001/api/posts/`
-        // ${event.target.id}
+    
 
          ) 
          setAllPost(response.data.posts)
@@ -37,7 +39,7 @@ const showPost =
      <h3>{post.description}</h3> 
 
      <button size='small'  onClick={() => navigate(`/EditPost/${post._id}`)}>Edit</button>
-     <button size='small' variant='danger'>Delete</button>
+     <button size='small' onClick={() => navigate(`/DeletePost/${post._id}`)}>Delete</button>
       
     </div>
     )
