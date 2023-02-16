@@ -27,6 +27,17 @@ const Comment = () => {
       getPost()
     }, [])
   
+    
+
+    
+
+
+    // 
+
+
+
+
+
   
     const handleComment = (event) => {
       setComment({ ...comment, [event.target.id]: event.target.value })
@@ -36,7 +47,7 @@ const Comment = () => {
       event.preventDefault()
       console.log(event.target)
     
-      await axios.put(`http://localhost:3001/api/comments/${id}`, comment)
+      await axios.post(`http://localhost:3001/api/comments/${id}`, comment)
   navigate('/listings')
   
   }
@@ -52,11 +63,13 @@ const Comment = () => {
   
   return (
 <div>
+  
 <div className='listing-wrapper'>
-      <img src={post.image} alt="vacation-Poster" />
-      <h2>{post.user}</h2>
-     <h2>{post.place}</h2> 
-     <h3>{post.description}</h3> 
+
+      <img src={post?.image} alt="vacation-Poster" />
+      <h2>{post?.user}</h2>
+     <h2>{post?.place}</h2> 
+      <h3>{post?.description}</h3> 
 
      <button size='small'  onClick={() => navigate(`/EditPost/${post._id}`)}>Edit</button>
      <button size='small' onClick={() => navigate(`/DeletePost/${post._id}`)}>Delete</button>
@@ -74,13 +87,13 @@ const Comment = () => {
     onChange={handleComment}
     value={comment?.name}
   />
-   <label htmlFor="discription">Discription</label>
+   <label htmlFor="description">Description</label>
   <textarea
-    id="discription"
+    id="description"
     cols="30"
     rows="10"
     onChange={handleComment}
-    value={comment?.discription}
+    value={comment?.description}
   ></textarea>
   <label htmlFor="image">Add Image</label>
   <textarea
@@ -93,6 +106,7 @@ const Comment = () => {
   <button type="submit">Send</button>
   
   </form>
+
   </div>
   )
   

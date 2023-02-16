@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import EditPost from "./EditPost"
-import DeletePost from "./DeletePost"
+
+
 
 import { useNavigate } from "react-router-dom"
 

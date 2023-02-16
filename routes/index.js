@@ -4,6 +4,7 @@ const router = Router()
 
 router.get('/', (req, res) => res.send('This is root!'))
 
+router.post('/comments/:id', controllers.createComment)
 router.post('/posts', controllers.createPost)
 router.get('/posts', controllers.getAllPosts)
 router.get('/posts/:id', controllers.getPostById)

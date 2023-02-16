@@ -1,5 +1,6 @@
 const Post = require('../models/post')
 const Comment = require('../models/comment')
+const { findById } = require('../models/post')
 
 const updatePost = async (req, res) => {
   try {
@@ -39,7 +40,7 @@ const createPost = async (req, res) => {
 
 const getAllPosts = async (req, res) => {
   try {
-    const posts = await Post.find()
+    const posts = await Post.find().populate('comments')
     return res.status(200).json({ posts })
   } catch (error) {
     return res.status(500).send(error.message)
@@ -49,7 +50,7 @@ const getAllPosts = async (req, res) => {
 const getPostById = async (req, res) => {
   try {
     const { id } = req.params
-    const post = await Post.findById(id)
+    const post = await Post.findById(id).populate('comments')
     if (post) {
       return res.status(200).json({ post })
     }
@@ -87,10 +88,15 @@ const deleteComment = async (req, res) => {
 
 const createComment = async (req, res) => {
   try {
-    const Comment = await new Comment(req.body)
+    console.log(req.body)
+    console.log(req.params)
+    const comment = await new Comment(req.body)
     await comment.save()
+    const post = await Post.findById(req.params.id)
+    post.comments.push(comment._id)
+    await post.save()
     return res.status(201).json({
-      post
+      comment
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })
