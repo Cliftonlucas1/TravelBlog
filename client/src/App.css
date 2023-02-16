@@ -17,7 +17,7 @@ form {
 }
 
 header {
-  background-color: #6c6ae4;
+  background-color: #141265;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -42,4 +42,10 @@ margin: 5px;
 img {
   height: 200px;
   width: 200px;
+}
+
+.about {
+  display: block;
+  
+
 }

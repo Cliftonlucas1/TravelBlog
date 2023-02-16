@@ -38,9 +38,12 @@ const showPost =
      <h2>{post.place}</h2> 
      <h3>{post.description}</h3> 
     
-   
-     <p>{post.comments[0]?.name}</p>
-     <p>{post.comments[0]?.description}</p>
+   {post.comments.map((comment)=>(
+    <div>
+     <p>{comment.name}</p>
+     <p>{comment.description}</p>
+     </div>
+   ))}
     
 
      
