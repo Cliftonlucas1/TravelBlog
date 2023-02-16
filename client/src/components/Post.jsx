@@ -27,41 +27,6 @@ const Post = (props) => {
 
 
 
-
-
-//   const deletePost = ({post}) => {
-// const {id}=useParams()
-
-// let navigate=useNavigate()
-
-//   const [deletePost, setDeletePost] = useState('')
-
-//   useEffect(()=>{
-//     const getPost = async () => {
-
-//       const response = await axios.get(
-//         `http://localhost:3001/api/posts/${id}`
-  
-
-//          ) 
-//          setdeletePost(response.data.post)
-//          console.log(response.data)
-
-//     }
-//     getPost()
-//   }, [id])
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <form onSubmit={handleSubmit}>
 <h2>Add A New Post!</h2>

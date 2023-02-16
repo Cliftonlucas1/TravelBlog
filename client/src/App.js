@@ -8,6 +8,7 @@ import './App.css'
 import Listings from './components/Listings'
 import EditPost from './components/EditPost'
 import DeletePost from './components/DeletePost'
+import Comment from './components/comment'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/listings" element={<Listings />} />
           <Route path="/EditPost/:id" element={<EditPost />} />
           <Route path="/DeletePost/:id" element={<DeletePost />} />
+          <Route path="/Comment/:id" element={<Comment />} />
         </Routes>
       </main>
     </div>

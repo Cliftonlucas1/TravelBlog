@@ -1,4 +1,5 @@
 const Post = require('../models/post')
+const Comment = require('../models/comment')
 
 const updatePost = async (req, res) => {
   try {
@@ -58,10 +59,76 @@ const getPostById = async (req, res) => {
   }
 }
 
+// Comment Section
+
+const updateComment = async (req, res) => {
+  try {
+    const comment = await Comment.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).json(comment)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const deleteComment = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Comment.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Comment deleted')
+    }
+    throw new Error('Comment not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const createComment = async (req, res) => {
+  try {
+    const Comment = await new Comment(req.body)
+    await comment.save()
+    return res.status(201).json({
+      post
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
+const getAllComments = async (req, res) => {
+  try {
+    const comments = await Comment.find()
+    return res.status(200).json({ comments })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const getCommentById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const comment = await Post.findById(id)
+    if (comment) {
+      return res.status(200).json({ post })
+    }
+    return res.status(404).send('Comment with the specified ID does not exists')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createPost,
   getAllPosts,
   getPostById,
   updatePost,
-  deletePost
+  deletePost,
+
+  createComment,
+  getAllComments,
+  getCommentById,
+  updateComment,
+  deleteComment
 }
