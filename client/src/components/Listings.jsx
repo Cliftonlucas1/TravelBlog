@@ -37,7 +37,13 @@ const showPost =
       <h2>{post.user}</h2>
      <h2>{post.place}</h2> 
      <h3>{post.description}</h3> 
+    
+   
+     <p>{post.comments[0]?.name}</p>
+     <p>{post.comments[0]?.description}</p>
+    
 
+     
      <button size='small'  onClick={() => navigate(`/EditPost/${post._id}`)}>Edit</button>
      <button size='small' onClick={() => navigate(`/DeletePost/${post._id}`)}>Delete</button>
      <button size='small'  onClick={() => navigate(`/Comment/${post._id}`)}>Add Comment</button>
