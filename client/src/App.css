@@ -80,3 +80,16 @@ font-size: 15px;
 #picDescription {
   font-size: 50;
 }
+
+button {
+
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
+button:hover {
+  filter: brightness(150%);
+}
