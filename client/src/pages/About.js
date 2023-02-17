@@ -20,7 +20,12 @@ const About = () => {
         </p>
       </div>
       <h1>Travel-Experience-Blog?</h1>
-      <p></p>
+      <p>
+        A travel-Experience blog is an online travel journal complete with
+        travel stories, photographs and video that document travellers'
+        experiences and enables them to share those experiences with friends and
+        family members, other travelers and even strangers they meet online”
+      </p>
     </div>
   )
 }
