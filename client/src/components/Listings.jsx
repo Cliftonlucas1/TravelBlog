@@ -7,24 +7,56 @@ import { useNavigate } from "react-router-dom"
 
 
 
+//
 
+  
+
+// 
 
 
 const Listings = (props) => {
 let navigate=useNavigate()
   const [allPost, setAllPost] = useState()
 
-  useEffect(() =>{
-    const getPost = async () => {
 
-      const response = await axios.get(
-        `http://localhost:3001/api/posts/`
+  const getPost = async () => {
+
+    const response = await axios.get(
+      `http://localhost:3001/api/posts/`
+  
+
+       ) 
+       setAllPost(response.data.posts)
+      
+  }
+
+  const deleteComment = async (commentId) => {
+
     
-
-         ) 
-         setAllPost(response.data.posts)
-         console.log(response.data.posts)
+ 
+  await axios.delete(`http://localhost:3001/api/comments/${commentId}`)
+     getPost()
+    
+      // const handleChangeDelete = async (postId) => {
+      //   await axios.delete(`http://localhost:3001/api/comments/${postId}`)
+      //     console.log(postId)
+         
+      //   }
+      
+      // const handleSubmitDelete = async (event) => {
+      //     event.preventDefault()
+      //     console.log(event.target)
+        
+      //     await axios.put(`http://localhost:3001/api/posts/${id}`, deleteComment)
+      
+      // }
     }
+
+
+
+
+  useEffect(() =>{
+    
     getPost()
   }, [])
 const showPost = 
@@ -37,11 +69,15 @@ const showPost =
       <h2>{post.user}</h2>
      <h2>{post.place}</h2> 
      <h3>{post.description}</h3> 
+     
     
    {post.comments.map((comment)=>(
     <div>
      <p>{comment.name}</p>
      <p>{comment.description}</p>
+     <img src={comment.image} alt="Comment-Poster" />
+
+<button onClick={() => deleteComment(comment._id) }>X</button>
      </div>
    ))}
     
