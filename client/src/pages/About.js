@@ -8,7 +8,6 @@ const About = () => {
           Go from one place to another, typically over a distance of some
           length.
         </p>
-
         <h2>Whats a Experience?</h2>
         <p>Practical contact with and observation of facts or events.</p>
 
@@ -22,9 +21,9 @@ const About = () => {
         <p>
           A travel-Experience blog is an online travel journal complete with
           travel stories, photographs and video that document travellers'
-          experiences and enables them to share those experiences with friends
-          and family members, other travelers and even strangers they meet
-          online”
+          experiences and enables them to share those experiences with a
+          community such as friends and family members, other travelers and even
+          strangers they meet online”
         </p>
       </div>
       <img
