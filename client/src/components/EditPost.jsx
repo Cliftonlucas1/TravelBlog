@@ -2,9 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { useParams, useNavigate } from "react-router-dom"
 
-
-
-
+// edit post lets you make changes to the current post that was selected   
 
 const EditPost = ({post}) => {
 const {id}=useParams()
