@@ -1,5 +1,7 @@
 import React from 'react'
 
+// This display everything on the home page
+
 const Home = () => {
   return (
     <div>
