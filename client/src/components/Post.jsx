@@ -21,7 +21,6 @@ const Post = (props) => {
 
   }
 
-// return display on the screen and also render javascript 
 
   return (
     <form onSubmit={handleSubmit}>
