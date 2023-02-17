@@ -77,16 +77,16 @@ const showPost =
      <p>{comment.description}</p>
      <img src={comment.image} alt="Comment-Poster" />
 
-<button onClick={() => deleteComment(comment._id) }>X</button>
+<button id="delete" onClick={() => deleteComment(comment._id) }>X</button>
      </div>
    ))}
     
 
-     
-     <button size='small'  onClick={() => navigate(`/EditPost/${post._id}`)}>Edit</button>
-     <button size='small' onClick={() => navigate(`/DeletePost/${post._id}`)}>Delete</button>
-     <button size='small'  onClick={() => navigate(`/Comment/${post._id}`)}>Add Comment</button>
-
+     <div class="listingbutton">
+     <button size='small' id="edit" onClick={() => navigate(`/EditPost/${post._id}`)}>Edit</button>
+     <button size='small' id="delete" onClick={() => navigate(`/DeletePost/${post._id}`)}>Delete</button>
+     <button size='small' id="addComment" onClick={() => navigate(`/Comment/${post._id}`)}>Add Comment</button>
+     </div>
       
     </div>
     )

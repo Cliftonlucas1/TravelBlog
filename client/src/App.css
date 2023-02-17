@@ -54,3 +54,15 @@ a:hover {
   background-color: rgb(179, 153, 244);
   transition: 0.9s;
 }
+
+#edit {
+  background-color: yellow;
+}
+
+#delete {
+  background-color: red;
+}
+
+#addComment {
+  background-color: rgb(215, 193, 151);
+}
