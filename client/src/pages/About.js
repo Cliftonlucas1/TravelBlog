@@ -1,3 +1,5 @@
+//  imput that will display on the about page
+
 const About = () => {
   return (
     <div>
