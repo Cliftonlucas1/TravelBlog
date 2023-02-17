@@ -39,16 +39,7 @@ const DeletePost = ({post}) => {
       console.log(event.target)
     
       await axios.put(`http://localhost:3001/api/posts/${id}`, deletePost)
-  
   }
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   return (

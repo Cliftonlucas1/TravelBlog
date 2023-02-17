@@ -6,14 +6,6 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
 
-
-//
-
-  
-
-// 
-
-
 const Listings = (props) => {
 let navigate=useNavigate()
   const [allPost, setAllPost] = useState()
@@ -37,19 +29,7 @@ let navigate=useNavigate()
   await axios.delete(`http://localhost:3001/api/comments/${commentId}`)
      getPost()
     
-      // const handleChangeDelete = async (postId) => {
-      //   await axios.delete(`http://localhost:3001/api/comments/${postId}`)
-      //     console.log(postId)
-         
-      //   }
-      
-      // const handleSubmitDelete = async (event) => {
-      //     event.preventDefault()
-      //     console.log(event.target)
-        
-      //     await axios.put(`http://localhost:3001/api/posts/${id}`, deleteComment)
-      
-      // }
+  
     }
 
 
