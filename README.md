@@ -33,6 +33,12 @@
 
 ![images](Hierarchy.png)
 
+![images](home.png)
+
+![images](addPost.png)
+
+![images](post.png)
+
 ### **_Future Updates_**
 
 coming soon!
@@ -41,11 +47,9 @@ coming soon!
 
 ### **_Credits_**
 
-### **_Credits_**
-
 #### background Images:
 
-#### Card Pictures: https://
+#### Background Picture: https://duckduckgo.com/
 
 ##### Markdown Cheatsheet: [GitHub](https://
 

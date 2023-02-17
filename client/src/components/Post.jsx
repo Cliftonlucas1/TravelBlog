@@ -39,25 +39,28 @@ const Post = (props) => {
   />
    <label htmlFor="place">Location</label>
   <textarea
+   type="text"
     id="place"
-    cols="30"
-    rows="10"
+    cols="20"
+    rows="20"
     onChange={handleChange}
     value={postState.place}
   ></textarea>
   <label htmlFor="description">Description</label>
   <textarea
+   type="text"
     id="description"
-    cols="30"
-    rows="10"
+    cols="20"
+    rows="20"
     onChange={handleChange}
     value={postState.description}
   ></textarea>
    <label htmlFor="image">Description Picture</label>
   <textarea
+   type="text"
     id="image"
-    cols="30"
-    rows="10"
+    cols="20"
+    rows="20"
     onChange={handleChange}
     value={postState.image}
   ></textarea>
