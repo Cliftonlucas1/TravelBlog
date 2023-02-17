@@ -60,8 +60,6 @@ const getPostById = async (req, res) => {
   }
 }
 
-// Comment Section
-
 const updateComment = async (req, res) => {
   try {
     const comment = await Comment.findByIdAndUpdate(req.params.id, req.body, {
@@ -126,11 +124,15 @@ const getCommentById = async (req, res) => {
 }
 
 module.exports = {
+  // Post Section
+
   createPost,
   getAllPosts,
   getPostById,
   updatePost,
   deletePost,
+
+  //  Comment Section
 
   createComment,
   getAllComments,
