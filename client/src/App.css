@@ -44,6 +44,7 @@ margin: 5px;
 img {
   height: 300px;
   width: 300px;
+  border-radius: 5px;
 }
 
 
@@ -92,4 +93,6 @@ button {
 
 button:hover {
   filter: brightness(150%);
+  transition: 0.6s;
+
 }

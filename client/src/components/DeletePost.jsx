@@ -78,7 +78,7 @@ const DeletePost = ({post}) => {
     onChange={handleChangeDelete}
     value={deletePost?.description}
   ></textarea>
-   <label htmlFor="image">Description Picture</label>
+   <label htmlFor="image">Picture</label>
   <textarea
     id="image"
     cols="30"
