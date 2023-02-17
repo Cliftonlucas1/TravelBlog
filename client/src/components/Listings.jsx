@@ -69,26 +69,26 @@ const showPost =
       <h2>{post.user}</h2>
      <h2>{post.place}</h2> 
      <h3>{post.description}</h3> 
+     <button size='small' id="edit" onClick={() => navigate(`/EditPost/${post._id}`)}>Edit</button>
+<button size='small' id="delete" onClick={() => navigate(`/DeletePost/${post._id}`)}>Delete</button>
+<button size='small' id="addComment" onClick={() => navigate(`/Comment/${post._id}`)}>Add Comment</button>
      
     
    {post.comments.map((comment)=>(
     <div>
      <p>{comment.name}</p>
      <p>{comment.description}</p>
-     <img src={comment.image} alt="Comment-Poster" />
+     <img id="commentPic" src={comment.image} alt="Comment-Poster" />
+
 
 <button id="delete" onClick={() => deleteComment(comment._id) }>X</button>
      </div>
    ))}
     
 
-     <div class="listingbutton">
-     <button size='small' id="edit" onClick={() => navigate(`/EditPost/${post._id}`)}>Edit</button>
-     <button size='small' id="delete" onClick={() => navigate(`/DeletePost/${post._id}`)}>Delete</button>
-     <button size='small' id="addComment" onClick={() => navigate(`/Comment/${post._id}`)}>Add Comment</button>
+     
      </div>
-      
-    </div>
+    
     )
   })
 
