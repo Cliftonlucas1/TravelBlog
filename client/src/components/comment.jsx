@@ -3,6 +3,10 @@ import axios from "axios"
 import { useParams, useNavigate } from "react-router-dom"
 
 
+// comment sectional functional
+// comment sectional you can leave comments
+
+
 const Comment = () => {
   const {id}=useParams()
   
@@ -27,15 +31,6 @@ const Comment = () => {
       getPost()
     }, [])
   
-    
-
-    
-
-
-    // 
-
-
-
 
 
   
