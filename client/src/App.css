@@ -12,7 +12,7 @@ form {
   justify-content: space-around;
   align-items: center;
 
-  width: 200vw;
+  width: 100vw;
   height: 30vh;
 }
 
@@ -48,4 +48,9 @@ img {
   display: block;
   
 
+}
+
+a:hover {
+  background-color: rgb(179, 153, 244);
+  transition: 0.9s;
 }

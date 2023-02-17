@@ -32,6 +32,7 @@ const Post = (props) => {
 <h2>Add A New Post!</h2>
   <label htmlFor="user"> name:</label>
   <input
+    placeholder='name goes here'
     type="text"
     id="user"
     onChange={handleChange}
@@ -39,6 +40,7 @@ const Post = (props) => {
   />
    <label htmlFor="place">Location</label>
   <textarea
+  placeholder='Location goes here'
    type="text"
     id="place"
     cols="20"
@@ -48,6 +50,7 @@ const Post = (props) => {
   ></textarea>
   <label htmlFor="description">Description</label>
   <textarea
+  placeholder='Description goes here'
    type="text"
     id="description"
     cols="20"
@@ -57,6 +60,7 @@ const Post = (props) => {
   ></textarea>
    <label htmlFor="image">Description Picture</label>
   <textarea
+  placeholder='Picture goes here'
    type="text"
     id="image"
     cols="20"
