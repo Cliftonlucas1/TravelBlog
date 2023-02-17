@@ -3,7 +3,6 @@ import axios from "axios"
 import { useParams, useNavigate } from "react-router-dom"
 
 
-// delete post is where you can delete a post of your choice
 
 const DeletePost = ({post}) => {
   const {id}=useParams()
