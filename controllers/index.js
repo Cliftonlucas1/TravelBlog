@@ -124,15 +124,11 @@ const getCommentById = async (req, res) => {
 }
 
 module.exports = {
-  // Post Section
-
   createPost,
   getAllPosts,
   getPostById,
   updatePost,
   deletePost,
-
-  //  Comment Section
 
   createComment,
   getAllComments,
