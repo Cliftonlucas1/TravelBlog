@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 
 
-
 import { useNavigate } from "react-router-dom"
 
 
@@ -32,9 +31,6 @@ let navigate=useNavigate()
   
     }
 
-
-
-
   useEffect(() =>{
     
     getPost()
@@ -62,12 +58,10 @@ const showPost =
      <img id="commentPic" src={comment.image} alt="Comment-Poster" />
 
 
-<button id="delete" onClick={() => deleteComment(comment._id) }>X</button>
+<button id="delete" onClick={() => deleteComment(comment._id) }>x</button>
      </div>
    ))}
-    
-
-     
+       
      </div>
     
     )
